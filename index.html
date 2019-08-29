@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>组织图</title>
+</head>
+<style>
+    #org {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div id="org"></div>
+</body>
+
+<script src="orgchart.js"></script>
+<script>
+    orgChart({
+        el: 'org',
+        data: {
+            name: '渔痴鱼醉',
+            children: [{
+                name: '前端',
+                children: [{
+                    name: '官网',
+                    children: [{
+                        name: 'banner图'
+                    }, {
+                        name: '餐品展示'
+                    }, {
+                        name: '公司介绍'
+                    }, {
+                        name: '公司活动'
+                    }, {
+                        name: '加盟信息'
+                    }, {
+                        name: '联系我们'
+                    }]
+                }, {
+                    name: '管理后台',
+                    children: [{
+                        name: 'banner管理'
+                    }, {
+                        name: '活动管理'
+                    }]
+                }]
+            }, {
+                name: '后台',
+                children: [{
+                    name: '服务器',
+                    children: [{
+                        name: '域名'
+                    }, {
+                        name: '虚拟主机',
+                        children: [{
+                            name: '阿里云'
+                        }]
+                    }, {
+                        name: '备案'
+                    }]
+                }, {
+                    name: 'api接口',
+                    children: [{
+                        name: '官网',
+                        children: [{
+                            name: 'banner读取'
+                        }, {
+                            name: '活动读取'
+                        }]
+                    }, {
+                        name: '后台管理',
+                        children: [{
+                            name: '登录接口'
+                        }, {
+                            name: 'banner（增/删/改/查）'
+                        }, {
+                            name: '活动（增/删/改/查）'
+                        }]
+                    }]
+                }]
+            }],
+        }
+    });
+</script>
+
+</html>
